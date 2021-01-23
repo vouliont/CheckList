@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQi-pg-ivQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Picker Controller-->
+        <scene sceneID="trV-mA-oAH">
+            <objects>
+                <viewController id="GQi-pg-ivQ" customClass="DatePickerController" customModule="CheckList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="or5-g7-EDz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBF-vO-8V4">
+                                <rect key="frame" x="47" y="280" width="320" height="336"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LJj-7k-pqU">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTH-jF-NEj">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbC-zO-E8j">
+                                                        <rect key="frame" x="116" y="15" width="88" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZbC-zO-E8j" firstAttribute="centerY" secondItem="LTH-jF-NEj" secondAttribute="centerY" id="LtI-ia-FRC"/>
+                                                    <constraint firstItem="ZbC-zO-E8j" firstAttribute="centerX" secondItem="LTH-jF-NEj" secondAttribute="centerX" id="dsI-ZQ-al7"/>
+                                                    <constraint firstAttribute="height" constant="50" id="iBi-EW-0eC"/>
+                                                </constraints>
+                                            </view>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="6fV-aX-wW0">
+                                                <rect key="frame" x="0.0" y="60" width="320" height="216"/>
+                                            </datePicker>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cEy-dc-AdT">
+                                                <rect key="frame" x="0.0" y="286" width="320" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzi-54-eBK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
+                                                        <state key="normal" title="Reset Date"/>
+                                                        <connections>
+                                                            <action selector="resetDateAction:" destination="GQi-pg-ivQ" eventType="touchUpInside" id="thJ-bd-hFl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCd-6j-CgQ">
+                                                        <rect key="frame" x="165" y="0.0" width="155" height="50"/>
+                                                        <state key="normal" title="Ok"/>
+                                                        <connections>
+                                                            <action selector="okAction:" destination="GQi-pg-ivQ" eventType="touchUpInside" id="WpV-4G-7ph"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8nC-93-RuK"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="LJj-7k-pqU" firstAttribute="top" secondItem="oBF-vO-8V4" secondAttribute="top" id="HcB-vm-JzY"/>
+                                    <constraint firstItem="LJj-7k-pqU" firstAttribute="leading" secondItem="oBF-vO-8V4" secondAttribute="leading" id="Yk4-hs-0OY"/>
+                                    <constraint firstAttribute="bottom" secondItem="LJj-7k-pqU" secondAttribute="bottom" id="afn-NO-WAV"/>
+                                    <constraint firstAttribute="trailing" secondItem="LJj-7k-pqU" secondAttribute="trailing" id="rfz-W6-p2a"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="buQ-99-LIx"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30212973250823766" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="oBF-vO-8V4" firstAttribute="centerX" secondItem="or5-g7-EDz" secondAttribute="centerX" id="GUP-Tb-dP3"/>
+                            <constraint firstItem="oBF-vO-8V4" firstAttribute="centerY" secondItem="or5-g7-EDz" secondAttribute="centerY" id="JQe-ec-Bpq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="6fV-aX-wW0" id="I09-NU-32z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="de2-Ah-ggq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="-41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
